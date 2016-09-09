@@ -5,7 +5,11 @@
     <body>
         <div class="jumbotron">
             <div class="container">
-                <h1>Welcome to my Python project!</h1>
+			{% if tname %}
+                <h1>Welcome to my Python project { tname } !!!</h1>
+			{% else %}	
+				<h1>Welcome to my Python project!</h1>
+			{% endif %}
 				<a href="{{ url_for('about') }}"> About this project</a>
             </div>
         </div>
